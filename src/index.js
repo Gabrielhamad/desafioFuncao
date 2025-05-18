@@ -18,18 +18,9 @@ function calcularNivel(vitorias, derrotas) {
         nivel = "Imortal";
     }
 
-    console.log(`O Herói tem de saldo de **${saldoVitorias}** está no nível de **${nivel}**`);
+    console.log(`O Herói tem de saldo de ${saldoVitorias} está no nível de ${nivel}`);
     return { saldoVitorias, nivel };
 }
 
-// Pegando os valores passados no terminal
-const args = process.argv.slice(2);
-const vitorias = parseInt(args[0]);
-const derrotas = parseInt(args[1]);
-
-// Verifica se os valores são válidos
-if (isNaN(vitorias) || isNaN(derrotas)) {
-    console.log("Por favor, forneça dois números: vitórias e derrotas.");
-} else {
-    calcularNivel(vitorias, derrotas);
-}
+// Exemplo de uso:
+calcularNivel(75, 20);  // Altere os valorgites aqui para testar outros casos
